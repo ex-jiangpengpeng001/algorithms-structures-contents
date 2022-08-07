@@ -23,6 +23,20 @@ public class Code05_BubbleSort {
         }
     }
 
+    public static void insertSort(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return;
+        }
+        int N = arr.length;
+        for (int end = 1; end < N; end++) {
+            int newNumIndex = end;
+            while (newNumIndex - 1 >= 0 && arr[newNumIndex - 1] > arr[newNumIndex]) {
+                swap(arr, newNumIndex - 1, newNumIndex);
+                newNumIndex--;
+            }
+        }
+    }
+
     public static void printArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
@@ -33,7 +47,7 @@ public class Code05_BubbleSort {
     public static void main(String[] args) {
         int[] arr = {7, 1, 3, 5, 1, 6, 8, 1, 3, 5, 7,5 ,6};
         printArray(arr);
-        bubbleSort(arr);
+        insertSort(arr);
         printArray(arr);
     }
 }
