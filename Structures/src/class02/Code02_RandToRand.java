@@ -129,4 +129,18 @@ public class Code02_RandToRand {
     public static int g() {
         return f4() + 1;
     }
+
+    // 你只能知道，x会以固定概率返回0和1，但是x的内容，你看不到！
+    public static int x() {
+        return Math.random() < 0.84 ? 0 : 1;
+    }
+
+    // 等概率返回0和1
+    public static int y() {
+        int ans = 0;
+        do {
+            ans = x();
+        } while (ans == x());
+        return ans;
+    }
 }
