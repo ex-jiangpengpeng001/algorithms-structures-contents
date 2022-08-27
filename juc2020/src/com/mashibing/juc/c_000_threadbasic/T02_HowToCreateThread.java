@@ -33,8 +33,10 @@ public class T02_HowToCreateThread {
             System.out.println("Hello Lambda!");
         }).start();
 
-        Thread t = new Thread(new FutureTask<>(new MyCall()));
+        FutureTask<String> task = new FutureTask<>(new MyCall());
+        Thread t = new Thread(task);
         t.start();
+        System.out.println(task.get());
 
         ExecutorService service = Executors.newCachedThreadPool();
         service.execute(()->{
