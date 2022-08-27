@@ -84,7 +84,7 @@ public class Code03_Comp {
                 break;
             }
         }
-
+        System.out.println();
     }
 
 }
