@@ -1,4 +1,4 @@
-package com.mashibing.juc.c_001_00_Volatile;
+package com.mashibing.juc.c_001_01_Volatile;
 
 import com.mashibing.util.SleepHelper;
 

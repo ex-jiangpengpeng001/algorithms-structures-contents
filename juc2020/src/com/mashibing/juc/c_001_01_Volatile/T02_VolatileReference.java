@@ -1,7 +1,7 @@
 /**
  * volatile 引用类型（包括数组）只能保证引用本身的可见性，不能保证内部字段的可见性
  */
-package com.mashibing.juc.c_001_00_Volatile;
+package com.mashibing.juc.c_001_01_Volatile;
 
 import com.mashibing.util.SleepHelper;
 
