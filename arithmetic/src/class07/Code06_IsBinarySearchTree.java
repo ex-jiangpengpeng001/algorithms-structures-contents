@@ -1,5 +1,6 @@
 package class07;
 
+// 测试地址：https://leetcode.com/problems/validate-binary-search-tree
 public class Code06_IsBinarySearchTree {
 
     public static class TreeNode {
