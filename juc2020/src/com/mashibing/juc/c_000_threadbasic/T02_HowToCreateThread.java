@@ -27,22 +27,22 @@ public class T02_HowToCreateThread {
 
     //启动线程的5种方式
     public static void main(String[] args) throws Exception {
-        new MyThread().start();
-        new Thread(new MyRun()).start();
+        new MyThread().start(); // 1
+        new Thread(new MyRun()).start(); // 2
         new Thread(()->{
             System.out.println("Hello Lambda!");
-        }).start();
+        }).start(); // 3
 
-        FutureTask<String> task = new FutureTask<>(new MyCall());
+        FutureTask<String> task = new FutureTask<>(new MyCall()); // 5
         Thread t = new Thread(task);
         t.start();
         System.out.println(task.get());
 
-        ExecutorService service = Executors.newCachedThreadPool();
+        ExecutorService service = Executors.newCachedThreadPool(); // 4
         service.execute(()->{
             System.out.println("Hello ThreadPool");
         });
-        Future<String> f = service.submit(new MyCall());
+        Future<String> f = service.submit(new MyCall()); // 5
         String s = f.get();
         System.out.println(s);
         service.shutdown();

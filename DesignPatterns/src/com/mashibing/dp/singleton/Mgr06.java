@@ -6,7 +6,8 @@ public class Mgr06 {
     private Mgr06() {};
 
     public static Mgr06 getInstance() {
-        if (INSTANCE == null) {
+        // 业务逻辑代码省略
+        if (INSTANCE == null) { // Double Check Lock
             // 双重检查
             synchronized(Mgr06.class) {
                 if (INSTANCE == null) {
