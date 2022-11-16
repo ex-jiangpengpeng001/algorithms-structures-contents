@@ -1,5 +1,7 @@
 package com.mashibing.dp.singleton;
-
+/**
+ * 懒汉式单例
+ */
 public class Mgr03 {
     private static Mgr03 INSTANCE;
 
