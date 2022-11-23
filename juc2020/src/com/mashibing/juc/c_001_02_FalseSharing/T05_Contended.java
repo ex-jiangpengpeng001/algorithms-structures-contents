@@ -1,6 +1,6 @@
 package com.mashibing.juc.c_001_02_FalseSharing;
 
-import sun.misc.Contended;
+//import sun.misc.Contended;
 //注意：运行这个小程序的时候，需要加参数：-XX:-RestrictContended
 import java.util.concurrent.CountDownLatch;
 
@@ -8,7 +8,7 @@ public class T05_Contended {
     public static long COUNT = 10_0000_0000L;
 
     private static class T {
-        @Contended  //只有1.8起作用
+//        @Contended  //只有1.8起作用
         public long x = 0L;
     }
 
