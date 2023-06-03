@@ -39,4 +39,11 @@ public class Code01_PreSum {
 
     }
 
+    public static void main(String[] args) {
+        int[] arr = {3, 2 , -1, 6, 7, 2, -2};
+        Code01_PreSum.RangeSum2 sum = new Code01_PreSum.RangeSum2(arr);
+        System.out.println(sum.rangeSum(3, 6));
+
+    }
+
 }

@@ -42,7 +42,7 @@ public class Code02_RandToRand {
         System.out.println("=========");
 
         count = 0;
-        double x = 0.17;
+        double x = 0.3;
         for (int i = 0; i < testTimes; i++) {
             if (xToXPower2Max() < x) {
                 count++;
