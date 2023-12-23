@@ -1,8 +1,6 @@
 package com.mashibing.component;
 
 public abstract class Component {
-    public abstract void add(Component c); //增加成员
-    public abstract void remove(Component c); //删除成员
-    public abstract Component getChild(int i); //获取成员
-    public abstract void operation(); //业务方法
+    public abstract Component add(Component c);
+    public abstract void operation();
 }
