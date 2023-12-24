@@ -46,6 +46,12 @@
       <version>4.4</version>
     </dependency>
 
+    <!-- String工具类 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.10</version>
+    </dependency>
   </dependencies>
 
 </project>
