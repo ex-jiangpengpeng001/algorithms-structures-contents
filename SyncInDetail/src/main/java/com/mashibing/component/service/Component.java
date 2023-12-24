@@ -1,4 +1,4 @@
-package com.mashibing.component;
+package com.mashibing.component.service;
 
 public abstract class Component {
     public abstract Component add(Component c);
