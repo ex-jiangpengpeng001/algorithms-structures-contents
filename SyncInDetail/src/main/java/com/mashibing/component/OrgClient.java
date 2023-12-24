@@ -24,7 +24,7 @@ public class OrgClient {
         List<String> orgType = new ArrayList<>(Arrays.asList("H","B","B2","S"));
         List<OrgComponent> componentList = new ArrayList<>();
 
-        String showType = "B"; // 机构树显示到那层
+        String showType = "B2"; // 机构树显示到那层
         int lastIndex = StringUtils.isEmpty(showType) ? orgType.size() : orgType.lastIndexOf(showType);
 
         if (CollectionUtils.isNotEmpty(orgAuth)) {
@@ -33,8 +33,7 @@ public class OrgClient {
             ComponentEntity rootOrg = orgList.get(0);
             OrgComponent root = new OrgComponent(rootOrg);
             componentList.add(root);
-            for (int i = 0 ; i < orgList.size(); i ++) {
-                ComponentEntity org = orgList.get(i);
+            for (ComponentEntity org : orgList) {
                 int supIndex = orgAuth.indexOf(org.getSupId());
                 int typeIndex = orgType.lastIndexOf(org.getType());
                 if (supIndex >= 0 && typeIndex <= lastIndex) {
